@@ -30,7 +30,8 @@
 
 /* Base Styles */
 * {
-    border-radius: 0 !important; /* No rounded corners anywhere */
+    border-radius: 0 !important;
+    /* No rounded corners anywhere */
 }
 
 body {
@@ -90,25 +91,38 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, 
-        rgba(42, 157, 143, 0.1) 0%, 
-        rgba(233, 196, 106, 0.1) 50%, 
-        rgba(244, 162, 97, 0.1) 100%);
+    background: linear-gradient(135deg,
+            rgba(42, 157, 143, 0.1) 0%,
+            rgba(233, 196, 106, 0.1) 50%,
+            rgba(244, 162, 97, 0.1) 100%);
     animation: gradientShift 8s ease-in-out infinite;
 }
 
 .dark .hero-bg {
-    background: linear-gradient(135deg, 
-        rgba(38, 70, 83, 0.8) 0%, 
-        rgba(42, 157, 143, 0.2) 50%, 
-        rgba(244, 162, 97, 0.2) 100%);
+    background: linear-gradient(135deg,
+            rgba(38, 70, 83, 0.8) 0%,
+            rgba(42, 157, 143, 0.2) 50%,
+            rgba(244, 162, 97, 0.2) 100%);
 }
 
 @keyframes gradientShift {
-    0%, 100% { transform: translateX(0) translateY(0); }
-    25% { transform: translateX(-2px) translateY(-2px); }
-    50% { transform: translateX(2px) translateY(2px); }
-    75% { transform: translateX(-1px) translateY(1px); }
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: translateX(-2px) translateY(-2px);
+    }
+
+    50% {
+        transform: translateX(2px) translateY(2px);
+    }
+
+    75% {
+        transform: translateX(-1px) translateY(1px);
+    }
 }
 
 /* Phone Mockup */
@@ -174,6 +188,7 @@ html {
         transform: scale(0.8);
         opacity: 1;
     }
+
     100% {
         transform: scale(1.2);
         opacity: 0;
@@ -199,7 +214,9 @@ html {
     padding: 40px;
 }
 
-.idea-bubble, .phone-tap, .voice-wave {
+.idea-bubble,
+.phone-tap,
+.voice-wave {
     animation: float 3s ease-in-out infinite;
 }
 
@@ -218,13 +235,27 @@ html {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes slideRight {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(10px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
 }
 
 /* AI Visualization */
@@ -250,9 +281,23 @@ html {
     animation: nodeGlow 2s ease-in-out infinite;
 }
 
-.node-1 { top: 20px; left: 20px; }
-.node-2 { top: 20px; right: 20px; animation-delay: 0.5s; }
-.node-3 { bottom: 20px; left: 50%; transform: translateX(-50%); animation-delay: 1s; }
+.node-1 {
+    top: 20px;
+    left: 20px;
+}
+
+.node-2 {
+    top: 20px;
+    right: 20px;
+    animation-delay: 0.5s;
+}
+
+.node-3 {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 1s;
+}
 
 .connection {
     position: absolute;
@@ -276,14 +321,31 @@ html {
 }
 
 @keyframes nodeGlow {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.2); }
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
 }
 
 @keyframes connectionFlow {
-    0% { opacity: 0.3; }
-    50% { opacity: 1; }
-    100% { opacity: 0.3; }
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
 }
 
 .chat-mockup {
@@ -372,18 +434,6 @@ html {
     @apply border-2 border-voji-blue relative;
 }
 
-.pro-card::before {
-    content: 'POPULAR';
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--voji-blue);
-    color: white;
-    padding: 4px 16px;
-    font-size: 12px;
-    font-weight: bold;
-}
 
 /* Showcase Carousel */
 .showcase-carousel {
@@ -446,7 +496,8 @@ html {
     font-weight: 500;
 }
 
-.idea-entry, .saved-note {
+.idea-entry,
+.saved-note {
     padding: 10px;
     margin-bottom: 8px;
     background: #f3f4f6;
@@ -533,13 +584,27 @@ html {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideInRight {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Form Styles */
@@ -578,35 +643,35 @@ input[type="email"]:focus {
         width: 200px;
         height: 400px;
     }
-    
+
     .record-button {
         width: 80px;
         height: 80px;
     }
-    
+
     .record-icon {
         font-size: 32px;
     }
-    
+
     .capture-animation {
         flex-direction: column;
         gap: 10px;
         font-size: 32px;
     }
-    
+
     .arrow {
         transform: rotate(90deg);
         font-size: 24px;
     }
-    
+
     .ai-visualization {
         height: 300px;
     }
-    
+
     .chat-mockup {
         max-width: 250px;
     }
-    
+
     .screenshot-mockup {
         width: 200px;
         height: 350px;
@@ -614,11 +679,12 @@ input[type="email"]:focus {
 }
 
 @media (max-width: 640px) {
+
     .use-case-card,
     .feature-item {
         margin-bottom: 20px;
     }
-    
+
     .pricing-card {
         margin-bottom: 20px;
     }
@@ -644,8 +710,13 @@ input[type="email"]:focus {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Accessibility */
@@ -670,7 +741,7 @@ a:focus {
     .hero-bg {
         opacity: 0.3;
     }
-    
+
     .use-case-card,
     .pricing-card,
     .chat-mockup {
@@ -702,11 +773,12 @@ li span {
 }
 
 /* Button and Input Contrast */
-button, input {
+button,
+input {
     color: inherit;
 }
 
-.dark button:not(.bg-voji-red):not(.bg-voji-blue), 
+.dark button:not(.bg-voji-red):not(.bg-voji-blue),
 .dark input {
     color: #f9fafb;
 }
@@ -721,16 +793,28 @@ button, input {
 }
 
 /* Ensure headings have proper contrast */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: inherit;
 }
 
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
     color: #ffffff;
 }
 
 /* Improve text contrast for light theme sections */
-.light p, .light span, .light li {
+.light p,
+.light span,
+.light li {
     color: #1a202c;
 }
 
@@ -845,4 +929,4 @@ h1, h2, h3, h4, h5, h6 {
 
 .light .bg-gray-50 li {
     color: #1a202c !important;
-} 
+}
