@@ -13,15 +13,19 @@
     --bg-primary: #264653;
     --bg-secondary: #1a202c;
     --text-primary: #ffffff;
-    --text-secondary: #e2e8f0;
+    --text-secondary: #f7fafc;
+    --text-muted: #e2e8f0;
+    --text-subtle: #cbd5e0;
 }
 
 /* Light Theme */
 .light {
     --bg-primary: #ffffff;
-    --bg-secondary: #f7fafc;
-    --text-primary: #264653;
-    --text-secondary: #4a5568;
+    --bg-secondary: #f8fafc;
+    --text-primary: #1a202c;
+    --text-secondary: #2d3748;
+    --text-muted: #374151;
+    --text-subtle: #4a5568;
 }
 
 /* Base Styles */
@@ -31,6 +35,13 @@
 
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #ffffff;
+    color: #1a202c;
+}
+
+.dark body {
+    background-color: #1f2937;
+    color: #f9fafb;
 }
 
 /* Smooth Scrolling */
@@ -60,7 +71,7 @@ html {
 }
 
 .nav-link {
-    @apply text-voji-purple dark:text-gray-200 hover:text-voji-blue dark:hover:text-voji-yellow transition-colors font-medium;
+    @apply text-voji-purple dark:text-white hover:text-voji-blue dark:hover:text-voji-yellow transition-colors font-medium;
 }
 
 .mobile-nav-link {
@@ -330,7 +341,7 @@ html {
 }
 
 .use-case-card p {
-    @apply text-gray-600 dark:text-gray-300 leading-relaxed;
+    @apply text-gray-700 dark:text-gray-200 leading-relaxed;
 }
 
 /* Feature Items */
@@ -348,12 +359,13 @@ html {
 }
 
 .feature-item p {
-    @apply text-gray-600 dark:text-gray-300 leading-relaxed;
+    @apply text-gray-700 dark:text-gray-200 leading-relaxed;
 }
 
 /* Pricing Cards */
 .pricing-card {
     @apply bg-white dark:bg-gray-800 p-8 shadow-lg text-center;
+    color: #1a202c;
 }
 
 .pro-card {
@@ -449,7 +461,7 @@ html {
 }
 
 .screenshot-caption {
-    @apply text-center text-gray-600 dark:text-gray-300 font-medium;
+    @apply text-center text-gray-700 dark:text-gray-200 font-medium;
 }
 
 .carousel-dots {
@@ -478,6 +490,12 @@ html {
     display: inline-block;
 }
 
+.app-store-badge img {
+    width: 150px;
+    height: 48px;
+    object-fit: contain;
+}
+
 .coming-soon-overlay {
     position: absolute;
     top: 50%;
@@ -492,11 +510,15 @@ html {
 
 /* Animations */
 .animate-fade-in {
-    animation: fadeIn 1s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .animate-slide-in-right {
-    animation: slideInRight 1s ease-out;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 1s ease-out forwards;
 }
 
 .animate-on-scroll {
@@ -654,4 +676,173 @@ a:focus {
     .chat-mockup {
         border: 2px solid currentColor;
     }
+}
+
+/* Text Contrast Improvements */
+li span {
+    color: inherit;
+}
+
+.dark li span {
+    color: #f9fafb;
+}
+
+/* Ensure proper contrast for pricing card text */
+.dark .pricing-card {
+    color: #f9fafb;
+}
+
+/* Mobile Menu Contrast */
+#mobile-menu {
+    color: #1a202c;
+}
+
+.dark #mobile-menu {
+    color: #f9fafb;
+}
+
+/* Button and Input Contrast */
+button, input {
+    color: inherit;
+}
+
+.dark button:not(.bg-voji-red):not(.bg-voji-blue), 
+.dark input {
+    color: #f9fafb;
+}
+
+/* Section Background Contrast */
+.bg-gray-50 {
+    color: #1a202c;
+}
+
+.dark .bg-gray-50 {
+    color: #f9fafb;
+}
+
+/* Ensure headings have proper contrast */
+h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #ffffff;
+}
+
+/* Improve text contrast for light theme sections */
+.light p, .light span, .light li {
+    color: #1a202c;
+}
+
+.light .text-gray-700 {
+    color: #374151 !important;
+}
+
+.light .text-gray-600 {
+    color: #4a5568 !important;
+}
+
+.light .text-gray-500 {
+    color: #6b7280 !important;
+}
+
+/* Form input improvements for light theme */
+.light input[type="email"] {
+    color: #1a202c;
+    border-color: #374151;
+}
+
+.light input[type="email"]::placeholder {
+    color: #6b7280;
+}
+
+/* Chat message contrast improvements */
+.light .chat-message.user {
+    background: #e5e7eb;
+    color: #1a202c;
+}
+
+.light .chat-message.ai {
+    background: var(--voji-blue);
+    color: white;
+}
+
+/* Idea entry and saved note contrast */
+.light .idea-entry,
+.light .saved-note {
+    background: #e5e7eb;
+    color: #1a202c;
+}
+
+/* Screenshot content contrast */
+.light .screenshot-content {
+    background: white;
+    color: #1a202c;
+}
+
+/* Additional light theme contrast improvements */
+.light {
+    /* Ensure all text elements have sufficient contrast */
+    color: #1a202c;
+}
+
+.light p {
+    color: #1a202c;
+}
+
+.light span {
+    color: inherit;
+}
+
+.light li {
+    color: #1a202c;
+}
+
+/* Override Tailwind gray classes for better contrast in light mode */
+.light .text-gray-600 {
+    color: #374151 !important;
+}
+
+.light .text-gray-500 {
+    color: #4a5568 !important;
+}
+
+.light .text-gray-400 {
+    color: #6b7280 !important;
+}
+
+/* Ensure feature items have proper contrast */
+.light .feature-item p {
+    color: #1a202c !important;
+}
+
+.light .use-case-card p {
+    color: #1a202c !important;
+}
+
+/* List items in light mode */
+.light ul li span {
+    color: #1a202c;
+}
+
+/* Ensure all sections have proper text color inheritance */
+.light section {
+    color: #1a202c;
+}
+
+/* Specific fixes for sections with background colors */
+.light .bg-gray-50 {
+    color: #1a202c !important;
+}
+
+.light .bg-gray-50 p {
+    color: #1a202c !important;
+}
+
+.light .bg-gray-50 span {
+    color: #1a202c !important;
+}
+
+.light .bg-gray-50 li {
+    color: #1a202c !important;
 } 
