@@ -975,7 +975,6 @@ h6 {
 /* Pricing card text in light theme */
 .light .pricing-card {
     color: #1a202c !important;
-    background-color: #ffffff !important;
 }
 
 .light .pricing-card * {
