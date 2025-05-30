@@ -45,6 +45,13 @@ body {
     color: #f9fafb;
 }
 
+/* Light theme body and base text color */
+.light,
+.light body {
+    background-color: #ffffff;
+    color: #1a202c;
+}
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
@@ -811,122 +818,241 @@ h6 {
     color: #ffffff;
 }
 
-/* Improve text contrast for light theme sections */
+/* LIGHT THEME CONTRAST FIXES */
+
+/* Base light theme text colors - ensure all text is dark enough for contrast */
+.light {
+    color: #1a202c;
+}
+
 .light p,
 .light span,
-.light li {
+.light li,
+.light div {
     color: #1a202c;
 }
 
-.light .text-gray-700 {
-    color: #374151 !important;
-}
-
-.light .text-gray-600 {
-    color: #4a5568 !important;
-}
-
-.light .text-gray-500 {
-    color: #6b7280 !important;
-}
-
-/* Form input improvements for light theme */
-.light input[type="email"] {
-    color: #1a202c;
-    border-color: #374151;
-}
-
-.light input[type="email"]::placeholder {
-    color: #6b7280;
-}
-
-/* Chat message contrast improvements */
-.light .chat-message.user {
-    background: #e5e7eb;
-    color: #1a202c;
-}
-
-.light .chat-message.ai {
-    background: var(--voji-blue);
-    color: white;
-}
-
-/* Idea entry and saved note contrast */
-.light .idea-entry,
-.light .saved-note {
-    background: #e5e7eb;
-    color: #1a202c;
-}
-
-/* Screenshot content contrast */
-.light .screenshot-content {
-    background: white;
-    color: #1a202c;
-}
-
-/* Additional light theme contrast improvements */
-.light {
-    /* Ensure all text elements have sufficient contrast */
-    color: #1a202c;
-}
-
-.light p {
-    color: #1a202c;
-}
-
-.light span {
-    color: inherit;
-}
-
-.light li {
-    color: #1a202c;
-}
-
-/* Override Tailwind gray classes for better contrast in light mode */
-.light .text-gray-600 {
-    color: #374151 !important;
-}
-
-.light .text-gray-500 {
-    color: #4a5568 !important;
-}
-
-.light .text-gray-400 {
-    color: #6b7280 !important;
-}
-
-/* Ensure feature items have proper contrast */
-.light .feature-item p {
+/* Override all gray text colors in light theme to be much darker for better contrast */
+.light .text-gray-700,
+.light .text-gray-600,
+.light .text-gray-500,
+.light .text-gray-400,
+.light .text-gray-300 {
     color: #1a202c !important;
 }
 
-.light .use-case-card p {
+/* Specific overrides for different gray shades to use dark colors */
+.light .text-gray-800 {
     color: #1a202c !important;
 }
 
-/* List items in light mode */
-.light ul li span {
-    color: #1a202c;
+.light .text-gray-900 {
+    color: #0f172a !important;
 }
 
-/* Ensure all sections have proper text color inheritance */
+/* CRITICAL FIX: Override voji-purple text color in light theme for better contrast */
+.light .text-voji-purple {
+    color: #1a202c !important;
+}
+
+/* Hero section specific fixes for light theme */
+.light #hero h1,
+.light #hero p {
+    color: #1a202c !important;
+}
+
+/* Hero waitlist box specific fixes for light theme */
+.light #hero .bg-white {
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+.light #hero .bg-white h3 {
+    color: var(--voji-blue) !important;
+}
+
+.light #hero .bg-white p {
+    color: #1a202c !important;
+}
+
+.light #hero .bg-white .text-voji-purple {
+    color: #1a202c !important;
+}
+
+.light #hero .bg-white .text-gray-700 {
+    color: #4a5568 !important;
+}
+
+/* Hero waitlist form input fixes for light theme */
+.light #hero input[type="email"] {
+    background-color: #ffffff !important;
+    border-color: #d1d5db !important;
+    color: #1a202c !important;
+}
+
+.light #hero input[type="email"]:focus {
+    border-color: var(--voji-blue) !important;
+}
+
+.light #hero input[type="email"]::placeholder {
+    color: #6b7280 !important;
+}
+
+/* Pricing section heading fix for light theme */
+.light #pricing h2 {
+    color: #1a202c !important;
+}
+
+/* Section-specific light theme fixes */
 .light section {
     color: #1a202c;
 }
 
-/* Specific fixes for sections with background colors */
-.light .bg-gray-50 {
+.light section p,
+.light section span,
+.light section li,
+.light section div {
+    color: #1a202c;
+}
+
+/* Background sections in light theme */
+.light .bg-gray-50,
+.light .bg-gray-100 {
+    background-color: #f9fafb !important;
     color: #1a202c !important;
 }
 
-.light .bg-gray-50 p {
+.light .bg-gray-50 *,
+.light .bg-gray-100 * {
     color: #1a202c !important;
 }
 
-.light .bg-gray-50 span {
+/* Form elements in light theme */
+.light input[type="email"] {
+    color: #1a202c !important;
+    background-color: #ffffff !important;
+    border-color: #374151 !important;
+}
+
+.light input[type="email"]::placeholder {
+    color: #6b7280 !important;
+}
+
+/* Chat and UI elements in light theme */
+.light .chat-message.user {
+    background: #f3f4f6 !important;
     color: #1a202c !important;
 }
 
-.light .bg-gray-50 li {
+.light .chat-message.ai {
+    background: var(--voji-blue) !important;
+    color: white !important;
+}
+
+.light .idea-entry,
+.light .saved-note {
+    background: #f3f4f6 !important;
     color: #1a202c !important;
+}
+
+.light .screenshot-content {
+    background: white !important;
+    color: #1a202c !important;
+}
+
+.light .screenshot-content * {
+    color: #1a202c !important;
+}
+
+/* Feature and use case cards in light theme */
+.light .feature-item p,
+.light .feature-item span,
+.light .use-case-card p,
+.light .use-case-card span {
+    color: #1a202c !important;
+}
+
+/* Pricing card text in light theme */
+.light .pricing-card {
+    color: #1a202c !important;
+    background-color: #ffffff !important;
+}
+
+.light .pricing-card * {
+    color: #1a202c !important;
+}
+
+/* Pricing card headings fix */
+.light .pricing-card h3 {
+    color: #1a202c !important;
+}
+
+/* Special case for pricing card with specific gray text */
+.light .pricing-card .text-gray-600,
+.light .pricing-card .text-gray-400,
+.light .pricing-card .text-gray-300 {
+    color: #4a5568 !important;
+}
+
+/* List items and text elements */
+.light ul li span,
+.light ol li span {
+    color: #1a202c !important;
+}
+
+/* Footer adjustments for light theme */
+.light footer {
+    background-color: var(--voji-purple) !important;
+    color: white !important;
+}
+
+.light footer * {
+    color: white !important;
+}
+
+/* Make sure any remaining text elements have proper contrast */
+.light .text-sm,
+.light .text-lg,
+.light .text-xl,
+.light .text-2xl {
+    color: #1a202c !important;
+}
+
+/* All heading elements in light theme should be dark */
+.light h1,
+.light h2,
+.light h3,
+.light h4,
+.light h5,
+.light h6 {
+    color: #1a202c !important;
+}
+
+/* Navigation hover states in light theme */
+.light .hover\:bg-gray-100:hover {
+    background-color: #f3f4f6 !important;
+}
+
+/* Screenshot caption and other small text */
+.light .screenshot-caption {
+    color: #1a202c !important;
+}
+
+/* Override any remaining light-colored text in light theme */
+.light .text-muted,
+.light .text-subtle {
+    color: #374151 !important;
+}
+
+/* Ensure proper contrast for any remaining elements */
+.light * {
+    color: inherit;
+}
+
+/* Special handling for elements that should remain light (like in dark backgrounds) */
+.light .bg-voji-red *,
+.light .bg-voji-blue *,
+.light .bg-voji-green *,
+.light .bg-voji-purple * {
+    color: white !important;
 }
