@@ -16,28 +16,8 @@
         rel="stylesheet">
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'voji-red': '#e76f51',
-                        'voji-orange': '#f4a261',
-                        'voji-yellow': '#e9c46a',
-                        'voji-green': '#8ab17d',
-                        'voji-blue': '#2a9d8f',
-                        'voji-purple': '#264653'
-                    },
-                    fontFamily: {
-                        'pacifico': ['Pacifico', 'cursive'],
-                        'afacad': ['Afacad', 'sans-serif'],
-                        'signika': ['Signika', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./dist/output.css">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -54,9 +34,9 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#why-voji" class="nav-link">Features</a>
-                    <a href="#use-cases" class="nav-link">Use Cases</a>
                     <a href="#why-voji" class="nav-link">Why Voji?</a>
+                    <a href="#showcase" class="nav-link">Features</a>
+                    <a href="#use-cases" class="nav-link">Use Cases</a>
                     <a href="#pricing" class="nav-link">Pricing</a>
                     <button onclick="scrollToWaitlist()"
                         class="bg-voji-red text-white px-6 py-2 font-medium hover:bg-opacity-90 transition-colors">
@@ -269,7 +249,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2
                 class="text-4xl lg:text-5xl font-bold text-center text-voji-purple dark:text-white mb-16 animate-on-scroll">
-                More Than Just Notes. It's Voji.
+                More Than Just Notes.
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="feature-item animate-on-scroll" style="animation-delay: 0.1s">

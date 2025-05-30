@@ -66,6 +66,8 @@ vojiapp/
    - For simple viewing: Open `index.html` directly in your browser
    - For development: Use a local server (recommended)
 
+Run `npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch` to build Tailwindcss.
+
 ### Development Server Options
 
 **Option 1: Python (if installed)**
