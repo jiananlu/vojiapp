@@ -67,6 +67,7 @@ vojiapp/
    - For development: Use a local server (recommended)
 
 Run `npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch` to build Tailwindcss.
+Install tailwincss CLI if you don't have it yet: `npm install -D tailwindcss @tailwindcss/cli`.
 
 ### Development Server Options
 
